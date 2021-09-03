@@ -8,11 +8,18 @@ function searchMovieLength() {
   performSearch(searchUrl);
 }
 
-function performSearch(searchUrl) {
-  var requestData = new XMLHttpRequest();
-  requestData.addEventListener('load', lengthResults);
-  requestData.open('GET', searchUrl);
-  requestData.send();
+function getApi(urlBase) {
+  fetch(urlBase)
+    .then(function (response) {
+      console.log(response.status);
+      if (response.status !== 200) {
+        responseText.textContent = response.status;
+      }
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    });
 }
 
 function lengthResults() {
@@ -20,9 +27,8 @@ function lengthResults() {
   if (responseJSON.error) console.log('Character not found');
   else {
     var urlBase = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup';
-    responseJSON.results.forEach(function (value)  {
-    const value = document.getElementById('mySearch').value;
+    responseJSON.results.forEach(function ()  {
     })
-    document.getElementById('demo').innerHTML = urlBase;
+    document.getElementById('lengthdropdown').innerHTML = urlBase;
   }
 }
