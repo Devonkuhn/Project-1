@@ -27,8 +27,9 @@ function lengthResults() {
   if (responseJSON.error) console.log('Character not found');
   else {
     var urlBase = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup';
-    responseJSON.results.forEach(function ()  {
+    responseJSON.results(function ()  {
+      document.getElementById('lengthdropdown').innerHTML = urlBase;
     })
-    document.getElementById('lengthdropdown').innerHTML = urlBase;
+    
   }
 }
