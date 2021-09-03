@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
     <div>
-        <!-- <button onclick="myFunction()" class="dropbtn">Choose a genre</button> -->
         <select id="genreDropdown" class="genre-content">
             <option>Action</option>
             <option>Comedy</option>
@@ -20,23 +20,26 @@
             <option>Romance</option>
             <option>Thriller</option>
         </select>
+        <button class="genreBtn">Choose a genre</button>
         <form>
             <b> Select you movie length search using dropdown list </b>
-            <select id = "lengthdropdown" onchange = "lengthSelect()" >
+            <select id = "lengthdropdown" class = "lengthbtn">
             <option> ---Choose Movie Length--- </option>
             <option> More than one hour </option>
             <option> More than two hours </option>
             <option> More than three hours </option>
-            
+        </form>
             </select>
+            <button type="button">Search</button>
         <div>
         <b>Input a value to filter by year of release</b>
         <input type="text" id="yearInput" minlength="4" maxlength="4" size="1" alt="release date input">
         </div>
+        <button type="button">Search</button>
 
     </div>
     
     <script src='./assets/javascript.js'></script>
-    <script src='./assets/script.js'></script>    
+    <script src='./assets/morganscript.js'></script>    
 </body>
 </html>
