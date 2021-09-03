@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -20,6 +21,20 @@
             <option>Thriller</option>
         </select>
         <button class="genreBtn">Choose a genre</button>
+        <form>
+            <b> Select you movie length search using dropdown list </b>
+            <select id = "lengthdropdown" class = "lengthbtn">
+            <option> ---Choose Movie Length--- </option>
+            <option> More than one hour </option>
+            <option> More than two hours </option>
+            <option> More than three hours </option>
+        </form>
+            </select>
+        <div>
+        <b>Input a value to filter by year of release</b>
+        <input type="text" id="yearInput" minlength="4" maxlength="4" alt="release date input">
+        </div>
+
     </div>
     
     <script src='./assets/javascript.js'></script>
