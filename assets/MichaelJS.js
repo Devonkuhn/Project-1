@@ -1,15 +1,17 @@
-var button = document.getElementById('lengthdropdown');
+var button = document.getElementById('lengthButton');
 button.addEventListener('click', searchMovieLength);
 
 function searchMovieLength() {
-  var userInputValue = document.getElementById('lengthdropdown').value;
-  var urlBase = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup'
-  var searchUrl = urlBase + userInputValue;
-  performSearch(searchUrl);
+  var length = document.getElementById('lengthdropdown').value;
+
+  performSearch(length);
 }
 
-function getApi(urlBase) {
-  fetch(urlBase)
+function performSearch(length) {
+  fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&with_runtime.gte="+length, {
+    headers: { 
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOGI4NDBhOTQwMjRkYjkyN2UwNGQ3NDI5MDc5YThhMyIsInN1YiI6IjYxMzQyY2FhMGI3MzE2MDAyYWM2YWFhYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.58X4jp1eA5k7TlNbmZxRphw11xdo28XelQE9Sd-DGLM'
+  }})
     .then(function (response) {
       console.log(response.status);
       if (response.status !== 200) {
@@ -19,17 +21,24 @@ function getApi(urlBase) {
     })
     .then(function (data) {
       console.log(data);
+      displaySearch (data)
+    })
+    .catch((error) => {
+      console.error('Error:', error);
     });
+    
 }
 
-function lengthResults() {
-  var responseJSON = JSON.parse(this.response);
-  if (responseJSON.error) console.log('Character not found');
-  else {
-    var urlBase = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup';
-    responseJSON.results(function ()  {
-      document.getElementById('lengthdropdown').innerHTML = urlBase;
-    })
-    
+
+function displaySearch(data){
+
+  var html = "";
+  for (let i = 0; i < data.results.length && i < 15; i++) {
+
+    var movie = data.results [i];
+    html += movie.original_title + "<br>";
   }
+
+  var resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = html
 }

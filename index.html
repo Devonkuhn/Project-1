@@ -21,25 +21,33 @@
             <option>Thriller</option>
         </select>
         <button class="genreBtn">Choose a genre</button>
-        <form>
+        <div>
             <b> Select you movie length search using dropdown list </b>
             <select id = "lengthdropdown" class = "lengthbtn">
             <option> ---Choose Movie Length--- </option>
-            <option> More than one hour </option>
-            <option> More than two hours </option>
-            <option> More than three hours </option>
-        </form>
+            <option value = "60"> More than one hour </option>
+            <option value = "120"> More than two hours </option>
+            <option value = "180"> More than three hours </option>
             </select>
-            <button type="button">Search</button>
+            <button id="lengthButton">Search</button>
+        </div>
         <div>
         <b>Input a value to filter by year of release</b>
         <input type="text" id="yearInput" minlength="4" maxlength="4" size="1" alt="release date input">
         </div>
         <button type="button">Search</button>
+<div id = "results">
+<!-- results go here from my JS -->
 
+//results go here 
+
+
+</div>
     </div>
     
     <script src='./assets/javascript.js'></script>
-    <script src='./assets/morganscript.js'></script>    
+    <script src='./assets/morganscript.js'></script>
+    <script src= "./assets/MichaelJS.js"></script>
+
 </body>
 </html>
