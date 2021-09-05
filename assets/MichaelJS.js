@@ -21,12 +21,13 @@ function performSearch(length) {
     })
     .then(function (data) {
       console.log(data);
-      displaySearch (data)
+      displaySearch (data);
+      localStorage.lengthResults = JSON.stringify(data);
     })
     .catch((error) => {
       console.error('Error:', error);
     });
-    
+
 }
 
 
@@ -42,3 +43,12 @@ function displaySearch(data){
   var resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = html
 }
+
+window.addEventListener('load', function() {
+   if (localStorage.lengthResults){
+     var data = JSON.parse(localStorage.lengthResults);
+     displaySearch(data)
+   }
+});
+
+
