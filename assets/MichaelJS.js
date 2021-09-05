@@ -21,19 +21,28 @@ function performSearch(length) {
     })
     .then(function (data) {
       console.log(data);
-      displaySearch (data);
+      displaySearch (data, false);
       localStorage.lengthResults = JSON.stringify(data);
     })
-    .catch(function (error) {
+    .catch((error) => {
       console.error('Error:', error);
     });
 
 }
 
 
-function displaySearch(data){
+function displaySearch(data, historic){
 
   var html = "";
+
+  if (historic == true){
+    html+="<strong><em>Previous Results</em></strong><br>";
+  }
+
+  else if (historic == false){
+    html+="<strong><em>Search Results</em></strong><br>"
+  }
+  
   for (let i = 0; i < data.results.length && i < 15; i++) {
 
     var movie = data.results [i];
@@ -47,7 +56,7 @@ function displaySearch(data){
 window.addEventListener('load', function() {
    if (localStorage.lengthResults){
      var data = JSON.parse(localStorage.lengthResults);
-     displaySearch(data)
+     displaySearch (data, true)
    }
 });
 
