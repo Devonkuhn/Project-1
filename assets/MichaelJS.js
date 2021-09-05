@@ -24,7 +24,7 @@ function performSearch(length) {
       displaySearch (data);
       localStorage.lengthResults = JSON.stringify(data);
     })
-    .catch((error) => {
+    .catch(function (error) {
       console.error('Error:', error);
     });
 
