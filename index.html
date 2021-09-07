@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div>
-        <!-- <button onclick="myFunction()" class="dropbtn">Choose a genre</button> -->
+    <section class="hero is-small is-link has-text-">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <p class="title">
+            FilmReal Engine
+            </p>
+        </div>
+    </section>  
+     <!-- <button onclick="myFunction()" class="dropbtn">Choose a genre</button> -->
+     <section class="section">
+         <div class="container">
+            <div class="columns is-3">
+               <div class="column is-2">
+                 <h1 class="title is-size-1 has-text-centered has-background-info-dark">Genre</h1>                
         <select id="genreDropdown" class="genre-content">
             <option>Action</option>
             <option>Comedy</option>
@@ -20,8 +33,29 @@
             <option>Romance</option>
             <option>Thriller</option>
         </select>
+     </div> 
+     <div class="column is-2">
+       <h2 class="is-size-1 title has-text-centered has-background-info-dark">Year</h2>
+       <div class="select is-danger is-rounded">
+        <select>
+          <option>Select dropdown</option>
+          <option>2000</option>
+          <option>2001</option>
+            <option>2002</option>
+            <option>2003</option>
+            <option>2004</option>
+            <option>2005</option>
+            <option>2006</option>
+            <option>2007</option>
+            <option>2008</option>
+        </select>
+      </div>
+     </div> 
+     <div class="column is-7">
+       <h3 class="is-size-1 title has-text-centered has-background-info-dark">Movie Length</h3>
+<!--- Should we call this Movie Time or Movie Run?-->       
         <form>
-            <b> Select you movie legnth search using dropdown list </b>
+            <b> Select you movie length search using dropdown list </b>
             <select id = "lengthdropdown" onchange = "lengthSelect()" >
             <option> ---Choose Movie Length--- </option>
             <option> More than one hour </option>
@@ -30,7 +64,24 @@
             
             </select>
     </div>
-    
+    </div>
+    </div>  
+</section>
+<section>
+  <div class="content">
+    <div class="has-background-primary-dark has-text-centered">
+    <p>This is where the results will appear? Lorem ipsum[1] dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Subscript works as well!</p>
+  </div>
+  </div>
+</section>
+<footer class="footer">
+   <div class="content has-text-centered">
+    <p>Created by Devon Kuhn, Morgan Moore, Michael Boyles and Sheri Foster </p>
+  </div>
+  </div>
+</footer>
+</section>
+
     <script src='./assets/javascript.js'></script>
     <script src='./assets/script.js'></script>    
 </body>
