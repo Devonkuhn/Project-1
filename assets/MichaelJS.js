@@ -35,7 +35,7 @@ function displaySearch(data, historic){
 
   var html = "";
 
-  if (historic == true){
+  if (historic === true){
     html+="<strong><em>Previous Results</em></strong><br>";
   }
 
