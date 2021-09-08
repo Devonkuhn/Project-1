@@ -59,7 +59,7 @@
      <div class="column is-7">
        <h3 class="is-size-1 title has-text-centered has-background-info-dark">Movie Length</h3>
 <!--- Should we call this Movie Time or Movie Run?-->       
-        <form>
+        <select>
           <b> Select you movie length search using dropdown list </b>
           <select id = "lengthdropdown" onchange = "lengthSelect()" >
             <button class="genreBtn">Choose a genre</button>
@@ -71,7 +71,7 @@
                 <option value = "180"> More than three hours </option>
           </select>
             <button id="lengthButton">Search</button>
-        </form>
+        </select>
       <div>
         <b>Input a value to filter by year of release</b>
         <input type="text" id="yearInput" minlength="4" maxlength="4" size="1" alt="release date input">
