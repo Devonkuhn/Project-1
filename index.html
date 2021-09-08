@@ -1,90 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
     <title>Document</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
-<!--comment-->
-<body>
-  <section class="hero is-small is-link has-text-">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-          <p class="title">
-            FilmReal Engine
-          </p>
+  </head>
+  <!--comment-->
+  <body class="has-background-dark">
+    <section class="hero is-small has-background-info-dark">
+      <div
+        class="hero-body container has-text-centered has-background-info-dark has-text-gold"
+      >
+        <p class="title">FilmReal Engine</p>
       </div>
-  </section>  
-     <!-- <button onclick="myFunction()" class="dropbtn">Choose a genre</button> -->
-  <section class="section">
-    <div class = "columns">
+    </section>
+    <!-- <button onclick="myFunction()" class="dropbtn">Choose a genre</button> -->
+    <section class="section">
+      <div class="columns">
         <div class="column">
-          <h1 class="title is-size-1 has-text-centered has-background-info-dark">Genre</h1>                
-            <select id="genreDropdown" class="genre-content">
-              <option>Action</option>
-              <option>Comedy</option>
-              <option>Drama</option>
-              <option>Fantasy</option>
-              <option>Horror</option>
-              <option>Mystery</option>
-              <option>Romance</option>
-              <option>Thriller</option>
-            </select>
+          <h1
+            class="title is-size-1 has-text-centered has-background-info-dark"
+          >
+            Genre
+          </h1>
+          <select id="genreDropdown" class="genre-content">
+            <option>Action</option>
+            <option>Comedy</option>
+            <option>Drama</option>
+            <option>Fantasy</option>
+            <option>Horror</option>
+            <option>Mystery</option>
+            <option>Romance</option>
+            <option>Thriller</option>
+          </select>
         </div>
-      <div class="column">
-        <h3 class="is-size-1 title has-text-centered has-background-info-dark">Movie Length
-        </h3>
-<!--- Should we call this Movie Time or Movie Run?-->       
-          <b> Select you movie length search using dropdown list </b>
-            <select id = "lengthdropdown" class = "lengthbtn">
-              <b> Select you movie length search using dropdown list </b>
-                <option> ---Choose Movie Length--- </option>
-                <option value = "60"> More than one hour </option>
-                <option value = "120"> More than two hours </option>
-                <option value = "180"> More than three hours </option>
-            </select>
-            <button id="lengthButton">Search</button>
-      </div>
+        <div class="column">
+          <h3
+            class="is-size-1 title has-text-centered has-background-info-dark"
+          >
+            Movie Length
+          </h3>
+          <!--- Should we call this Movie Time or Movie Run?-->
+          <select id="lengthdropdown" class="lengthbtn">
+            <b> Select you movie length search using dropdown list </b>
+            <option>---Choose Movie Length---</option>
+            <option value="60">More than one hour</option>
+            <option value="120">More than two hours</option>
+            <option value="180">More than three hours</option>
+          </select>
+          <button id="lengthButton">Search</button>
+        </div>
 
         <div class="column">
-          <h2 class="is-size-1 title has-text-centered has-background-info-dark">Year</h2>
-         <div class="select is-danger is-rounded">
-           <select>
-             <option>Select dropdown</option>
-             <option>2000</option>
-             <option>2001</option>
-               <option>2002</option>
-               <option>2003</option>
-               <option>2004</option>
-               <option>2005</option>
-               <option>2006</option>
-               <option>2007</option>
-               <option>2008</option>
-           </select>
-         </div>
+          <h2
+            class="is-size-1 title has-text-centered has-background-info-dark"
+          >
+            Year
+          </h2>
+          <div class="select is-danger is-rounded">
+            <select>
+              <option>Select dropdown</option>
+              <option>2000</option>
+              <option>2001</option>
+              <option>2002</option>
+              <option>2003</option>
+              <option>2004</option>
+              <option>2005</option>
+              <option>2006</option>
+              <option>2007</option>
+              <option>2008</option>
+            </select>
+          </div>
           <button type="button">Search</button>
         </div>
-    </div>
-  </section>
-  <section>
-    <div class="content has-text-centered has-background-primary-dark">
-      <div id ="results">
       </div>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>Created by Devon Kuhn, Morgan Moore, Michael Boyles and Sheri Foster </p>
-    </div>
-  </footer>
+    </section>
+    <section>
+      <div
+        class="
+          content
+          has-text-centered has-text-white has-background-info-dark
+        "
+      >
+        <div id="results"></div>
+      </div>
+    </section>
+    <br></br>
+    <footer class="footer has has-background-info-dark">
+      <div
+        class="
+          content
+          has-text-centered has-background-info-dark has-text-white
+        "
+      >
+        <p>
+          Created by Devon Kuhn, Morgan Moore, Michael Boyles and Sheri Foster
+        </p>
+      </div>
+    </footer>
 
-
-    <script src='./assets/javascript.js'></script>
-    <script src='./assets/morganscript.js'></script>
-    <script src= "./assets/MichaelJS.js"></script>
-
-</body>
+    <script src="./assets/javascript.js"></script>
+    <script src="./assets/morganscript.js"></script>
+    <script src="./assets/MichaelJS.js"></script>
+  </body>
 </html>
