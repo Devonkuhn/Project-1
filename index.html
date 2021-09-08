@@ -29,6 +29,7 @@
           >
             Genre
           </h1>
+          <div class="select is-danger is-rounded">
           <select id="genreDropdown" class="genre-content">
             <option>---Chose Genre---</option>
             <option>Action</option>
@@ -40,7 +41,8 @@
             <option>Romance</option>
             <option>Thriller</option>
           </select>
-          <button id="genreBtn">Search</button>
+          </div>
+          <button class="button is-hovered is-rounded" id="genreBtn">Search</button>
         </div>
         <div class="column">
           <h3
@@ -49,6 +51,7 @@
             Movie Length
           </h3>
           <!--- Should we call this Movie Time or Movie Run?-->
+          <div class="select is-danger is-rounded">
           <select id="lengthdropdown" class="lengthbtn">
             <b> Select you movie length search using dropdown list </b>
             <option>---Choose Movie Length---</option>
@@ -56,7 +59,8 @@
             <option value="120">More than two hours</option>
             <option value="180">More than three hours</option>
           </select>
-          <button id="lengthButton">Search</button>
+          </div>
+          <button class="button is-hovered is-rounded" id="lengthButton" >Search</button>
         </div>
 
         <div class="column">
@@ -65,7 +69,7 @@
           >
             Year
           </h2>
-          <div class="select is-danger is-rounded">
+          <div class="select is-danger is-rounded is-right">
             <select>
               <option>Select dropdown</option>
               <option>2000</option>
@@ -79,7 +83,7 @@
               <option>2008</option>
             </select>
           </div>
-          <button type="button">Search</button>
+          <button type="button" class="button is-hovered is-rounded">Search</button>
         </div>
       </div>
     </section>

@@ -1,3 +1,6 @@
+HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f
+ttps://api.watchmode.com/v1/genres/?apiKey={apiKey}
+
 var genreBtn = document.getElementById("genreBtn");
 var apiKey = '9f1f886920cacc5ab769ccbe0ad1489f';
 var genre = document.getElementById('genreDropdown').value;
