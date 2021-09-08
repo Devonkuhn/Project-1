@@ -36,23 +36,7 @@
             <option>Thriller</option>
         </select>
      </section> 
-     <div class="column is-2">
-       <h2 class="is-size-1 title has-text-centered has-background-info-dark">Year</h2>
-       <div class="select is-danger is-rounded">
-        <select>
-          <option>Select dropdown</option>
-          <option>2000</option>
-          <option>2001</option>
-            <option>2002</option>
-            <option>2003</option>
-            <option>2004</option>
-            <option>2005</option>
-            <option>2006</option>
-            <option>2007</option>
-            <option>2008</option>
-        </select>
-      </div>
-     </div> 
+
      <div class="column is-7">
        <h3 class="is-size-1 title has-text-centered has-background-info-dark">Movie Length</h3>
 <!--- Should we call this Movie Time or Movie Run?-->       
@@ -69,16 +53,30 @@
           </select>
             <button id="lengthButton">Search</button>
         </select>
-      <div>
-        <b>Input a value to filter by year of release</b>
-        <input type="text" id="yearInput" minlength="4" maxlength="4" size="1" alt="release date input">
-        </div>
-        <button type="button">Search</button>
       </div>
         <div id = "results">
+        <!-- results go here from my JS -->
         </div>
-      <!-- results go here from my JS -->
 
+        
+        <div class="column is-2">
+          <h2 class="is-size-1 title has-text-centered has-background-info-dark">Year</h2>
+         <div class="select is-danger is-rounded">
+           <select>
+             <option>Select dropdown</option>
+             <option>2000</option>
+             <option>2001</option>
+               <option>2002</option>
+               <option>2003</option>
+               <option>2004</option>
+               <option>2005</option>
+               <option>2006</option>
+               <option>2007</option>
+               <option>2008</option>
+           </select>
+         </div>
+          <button type="button">Search</button>
+        </div>
   <section>
     <div class="content">
       <div class="has-background-primary-dark has-text-centered">
