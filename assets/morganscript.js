@@ -1,44 +1,44 @@
-// HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f
 // https://api.watchmode.com/v1/genres/?apiKey=HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f
-
+// 11
+// https://api.watchmode.com/v1/list-titles/?apiKey=HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f&genre=11
 var genreBtn = document.getElementById("genreBtn");
 var apiKey = 'HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f';
 var genre = document.getElementById('genreDropdown').value;
-var apiUrl = 'https://api.watchmode.com/v1/list-titles/?apiKey=' + apiKey + '&genre=' + genreID
+var apiUrl = 'https://api.watchmode.com/v1/list-titles/?apiKey=' + apiKey + '&genres=' + genreID
 var data = '';
 var genreID ='';
 var genreList = [
   {
     name: 'Action',
-    id: '28'
+    id: '1'
   },
   {
     name: 'Comedy',
-    id: '35'
+    id: '4'
   },
   {
     name: 'Drama',
-    id: '18'
+    id: '7'
   },
   {
     name: 'Fantasy',
-    id: '14'
+    id: '9'
   },
   {
     name: 'Horror',
-    id: '27'
+    id: '11'
   },
   {
     name: 'Mystery',
-    id: '9648'
+    id: '13'
   },
   {
     name: 'Romance',
-    id: '10749'
+    id: '14'
   },
   {
     name: 'Thriller',
-    id: '53'
+    id: '17'
   }
 ];
 
@@ -67,7 +67,7 @@ function getGenreList() {
 }
 
 function getGenre(genre) {
-    fetch('https://api.watchmode.com/v1/list-titles/?apiKey=' + apiKey + '&genre=' + genreID)
+    fetch('https://api.watchmode.com/v1/list-titles/?apiKey=' + apiKey + '&genres=' + genreID)
       .then(function (response) {
         console.log(response.status);
         if (response.status !== 200) {
@@ -96,7 +96,7 @@ var displayGenre = function(data, historic) {
   else if (historic == false) {
     html+="<strong><em>Search Results</em></strong><br>"
   }
-  
+  console.log(data.titles.length);
   for (let i = 0; i < data.titles.length && i < 15; i++) {
 
     var movie = data.titles[i].title;
