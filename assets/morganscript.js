@@ -1,9 +1,6 @@
-// https://api.watchmode.com/v1/genres/?apiKey=HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f
-// 11
-// https://api.watchmode.com/v1/list-titles/?apiKey=HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f&genre=11
 var genreBtn = document.getElementById("genreBtn");
-var apiKey = 'HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f';
 var genre = document.getElementById('genreDropdown').value;
+var apiKey = 'HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f';
 var apiUrl = 'https://api.watchmode.com/v1/list-titles/?apiKey=' + apiKey + '&genres=' + genreID
 var data = '';
 var genreID ='';
@@ -91,19 +88,16 @@ var displayGenre = function(data, historic) {
 
   if (historic == true) {
     html+="<strong><em>Previous Results</em></strong><br>";
-  }
-
-  else if (historic == false) {
+  } else if (historic == false) {
     html+="<strong><em>Search Results</em></strong><br>"
   }
-  console.log(data.titles.length);
+  
   for (let i = 0; i < data.titles.length && i < 15; i++) {
-
     var movie = data.titles[i].title;
     html += movie + "<br>";
   }
 
-  var genreResultsDiv = document.getElementById('results');
+  var genreResultsDiv = document.getElementById('genreResults');
   genreResultsDiv.innerHTML = html
 }
 
