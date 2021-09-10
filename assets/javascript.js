@@ -4,14 +4,22 @@ var button = document.getElementById("yearButton");
 button.addEventListener("click", searchreleaseYear);
 
 function searchreleaseYear() {
+<<<<<<< HEAD
   var length = document.getElementById("yearInput").value;
+=======
+  var length = document.getElementById("yearButton").value;
+>>>>>>> 3182fe9573c2880d6cf204564f5a383b5955ff49
 
   performSearch(length);
 }
 
 function performSearch(length) {
   fetch(
+<<<<<<< HEAD
     "https://developers.themoviedb.org/3/discover/movie?sort_by&primary_release_date.gte=2-15-01-01&primary_release_date.lte=2020-01-01" +
+=======
+    "https://developers.themoviedb.org/3/discover/movie?sort_by&primary_release_date.gte=2000-15-01-01&primary_release_date.lte=2020-09-09" +
+>>>>>>> 3182fe9573c2880d6cf204564f5a383b5955ff49
       length,
     {
       headers: {
@@ -44,6 +52,7 @@ function displaySearch(data, historic) {
     html += "<strong><em>Previous Results</em></strong><br>";
   } else if (historic == false) {
     html += "<strong><em>Search Results</em></strong><br>";
+<<<<<<< HEAD
   }
 
   for (let i = 0; i < data.results.length && i < 15; i++) {
@@ -68,4 +77,22 @@ const modal = document.querySelector(".modal");
 
 modal.addEventListener("click", () => {
   modal.classList.remove("is-active");
+=======
+  }
+
+  for (let i = 0; i < data.results.yearResults && i < 15; i++) {
+    var movie = data.results[i];
+    html += movie.original_title + "<br>";
+  }
+
+  var resultsDiv = document.getElementById("yearResults");
+  resultsDiv.innerHTML = html;
+}
+
+window.addEventListener("load", function () {
+  if (localStorage.yearResults) {
+    var data = JSON.parse(localStorage.yearResults);
+    displaySearch(data, true);
+  }
+>>>>>>> 3182fe9573c2880d6cf204564f5a383b5955ff49
 });

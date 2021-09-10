@@ -1,44 +1,41 @@
-HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f
-ttps://api.watchmode.com/v1/genres/?apiKey={apiKey}
-
 var genreBtn = document.getElementById("genreBtn");
-var apiKey = '9f1f886920cacc5ab769ccbe0ad1489f';
 var genre = document.getElementById('genreDropdown').value;
-var apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + apiKey + '&language=en-US&sort_by=popularity.desc&with_genres=' + genre;
+var apiKey = 'HUTH1QtfQAfqpTYJWHo05rXbQdSw6LmKoEgwF53f';
+var apiUrl = 'https://api.watchmode.com/v1/list-titles/?apiKey=' + apiKey + '&genres=' + genreID
 var data = '';
 var genreID ='';
 var genreList = [
   {
     name: 'Action',
-    id: '28'
+    id: '1'
   },
   {
     name: 'Comedy',
-    id: '35'
+    id: '4'
   },
   {
     name: 'Drama',
-    id: '18'
+    id: '7'
   },
   {
     name: 'Fantasy',
-    id: '14'
+    id: '9'
   },
   {
     name: 'Horror',
-    id: '27'
+    id: '11'
   },
   {
     name: 'Mystery',
-    id: '9648'
+    id: '13'
   },
   {
     name: 'Romance',
-    id: '10749'
+    id: '14'
   },
   {
     name: 'Thriller',
-    id: '53'
+    id: '17'
   }
 ];
 
@@ -50,10 +47,7 @@ function searchGenre() {
 }
 
 function getGenreList() {
-    fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=' + apiKey + '&language=en-US', {
-        headers: { 
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOGI4NDBhOTQwMjRkYjkyN2UwNGQ3NDI5MDc5YThhMyIsInN1YiI6IjYxMzQyY2FhMGI3MzE2MDAyYWM2YWFhYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.58X4jp1eA5k7TlNbmZxRphw11xdo28XelQE9Sd-DGLM'
-      }})
+    fetch('https://api.watchmode.com/v1/genres/?apiKey=' + apiKey)
     .then(function(response) {
         console.log(response.status);
         return response.json();
@@ -70,10 +64,7 @@ function getGenreList() {
 }
 
 function getGenre(genre) {
-    fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + apiKey + '&with_genres=' + genreID, {
-      headers: { 
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOGI4NDBhOTQwMjRkYjkyN2UwNGQ3NDI5MDc5YThhMyIsInN1YiI6IjYxMzQyY2FhMGI3MzE2MDAyYWM2YWFhYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.58X4jp1eA5k7TlNbmZxRphw11xdo28XelQE9Sd-DGLM'
-    }})
+    fetch('https://api.watchmode.com/v1/list-titles/?apiKey=' + apiKey + '&genres=' + genreID)
       .then(function (response) {
         console.log(response.status);
         if (response.status !== 200) {
@@ -83,7 +74,7 @@ function getGenre(genre) {
       })
       .then(function (data) {
         console.log(data);
-        displaySearch (data, false);
+        displayGenre(data, false);
         localStorage.lengthResults = JSON.stringify(data);
       })
       .catch((error) => {
@@ -97,19 +88,16 @@ var displayGenre = function(data, historic) {
 
   if (historic == true) {
     html+="<strong><em>Previous Results</em></strong><br>";
-  }
-
-  else if (historic == false) {
+  } else if (historic == false) {
     html+="<strong><em>Search Results</em></strong><br>"
   }
   
-  for (let i = 0; i < data.results.length && i < 15; i++) {
-
-    var movie = data.results [i];
-    html += movie.original_title + "<br>";
+  for (let i = 0; i < data.titles.length && i < 15; i++) {
+    var movie = data.titles[i].title;
+    html += movie + "<br>";
   }
 
-  var genreResultsDiv = document.getElementById('results');
+  var genreResultsDiv = document.getElementById('genreResults');
   genreResultsDiv.innerHTML = html
 }
 
