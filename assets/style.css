@@ -1,1 +1,28 @@
-*{};
+.button.is-paddedgenre-btn {
+  margin-left: 7em;
+  margin-right: 0;
+}
+.button.is-paddedlength-btn {
+  margin-left: 5em;
+}
+
+.button.is-paddedyear-btn {
+  margin-left: 7em;
+}
+
+#genreDropdown {
+  margin-left: 1em;
+}
+
+#lenghtdropdown {
+  margin-left: 4em;
+}
+
+#yearButton {
+  margin-left: 8em;
+}
+
+h4 {
+  margin-top: 40px;
+  font-size: 4rem;
+}
