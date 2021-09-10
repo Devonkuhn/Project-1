@@ -4,15 +4,36 @@
     background-size: 100%;
     background-position: center;
     line-height: 100%;
-    width: 99.9%;
+
+    width: 100%;
     background-image: url("https://image.shutterstock.com/image-vector/different-film-strip-frame-clapperboard-260nw-1297027963.jpg");
 }
 
-.h1-image {
+.h1-img, .h2-img, .h3-img {
     height: 60px;
     background-size: 100%;
     background-position: center;
     line-height: 100%;
+    width: 100%;
+    background-image: url("img.JPG");
+}
+
+/* .body-img {
+    height: 500px;
+    background-size: 100%;
+    background-position: center;
+    line-height: 100%;
     width: 99.9%;
-    background-image: url("https://media.istockphoto.com/vectors/realistic-3d-film-reel-stripe-cinema-on-blue-background-with-place-vector-id1173511424?b=1&k=20&m=1173511424&s=170667a&w=0&h=A0r-fG7winGn1hQAhMXlgq41_Wg7j-Q00Uz1yDt26qQ=");
+    background-image: url("img2.jpg");
+} */
+
+.footer-img {
+    height: 150px;
+    background-size: 100%;
+    background-position: center;
+    line-height: 100%;
+    width: 100%;
+    background-image: url("./footerimg.JPG");
+    display: block;
+    
 }
