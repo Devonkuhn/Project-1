@@ -5,26 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+    rel="stylesheet"
+    href="assets/style.css"
+  />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
+
     <title>Document</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <!--comment-->
   <body class="has-background-dark">
-    <section class="hero is-small has-background-info-dark">
+    <section class="hero header">
       <div
-        class="hero-body container has-text-centered has-background-info-dark has-text-gold"
+        class="hero-body container has-text-centered has-text-gold"
       >
-        <p class="title">FilmReal Engine</p>
+        <p class="title is-1 has-text-white">FilmReal Engine</p>
       </div>
     </section>
     <section class="section">
       <div class="columns">
         <div class="column">
           <h1
-            class="title is-size-1 has-text-centered has-background-info-dark"
+            class="title is-size-1 has-text-centered h1-image"
           >
             Genre
           </h1>
@@ -101,13 +106,15 @@
     <section>
       <div
         class="
-          content
+          content columns is-multiline
           has-text-centered has-text-white has-background-info-dark
         "
       >
-        <div id="genreResults"></div>
-        <div id="results"></div>
-        <div id="yearResults"></div>
+
+        <div class="content column is-one-third" id="genreResults"></div>
+        <div class="content column is-one-third" id="results"></div>
+        <div class="content column is-one-third" id="yearResults"></div>
+        
       </div>
     </section>
     <br></br>

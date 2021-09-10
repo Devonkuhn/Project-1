@@ -50,8 +50,8 @@ function displaySearch(data, historic){
       html += movie.original_title + "<br>";
     }
   
-    var resultsDiv = document.getElementById('yearResults');
-    resultsDiv.innerHTML = html
+    var yearResultsDiv = document.getElementById('yearResults');
+    yearResultsDiv.innerHTML = html
   }
   
   window.addEventListener('load', function() {
