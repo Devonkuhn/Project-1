@@ -1,13 +1,20 @@
 var button = document.getElementById("lengthButton");
 button.addEventListener("click", searchMovieLength);
+document
+  .querySelector(".modal .modal-close")
+  .addEventListener("click", closeModal);
+
+function closeModal() {
+  document.querySelector("#modal").classList.remove("is-active");
+}
 
 function searchMovieLength() {
   var length = document.getElementById("lengthdropdown").value;
 
-  performSearch(length);
+  performTimeSearch(length);
 }
 
-function performSearch(length) {
+function performTimeSearch(length) {
   fetch(
     "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&with_runtime.gte=" +
       length,
@@ -27,7 +34,7 @@ function performSearch(length) {
     })
     .then(function (data) {
       console.log(data);
-      displaySearch(data, false);
+      displayLengthSearch(data, false);
       localStorage.lengthResults = JSON.stringify(data);
     })
     .catch((error) => {
@@ -35,7 +42,7 @@ function performSearch(length) {
     });
 }
 
-function displaySearch(data, historic) {
+function displayLengthSearch(data, historic) {
   var html = "";
 
   if (historic === true) {
@@ -56,6 +63,9 @@ function displaySearch(data, historic) {
 window.addEventListener("load", function () {
   if (localStorage.lengthResults) {
     var data = JSON.parse(localStorage.lengthResults);
-    displaySearch(data, true);
+    displayLengthSearch(data, true);
   }
+
+  initYearResults();
+  initGenreResults();
 });

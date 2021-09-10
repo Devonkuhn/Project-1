@@ -12,18 +12,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
-
+    
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Document</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <!--comment-->
   <body class="has-background-dark">
-    <section class="hero header">
-      <div
-        class="hero-body container has-text-centered has-text-gold"
-      >
-        <p class="title is-1 has-text-white">FilmReal Engine</p>
+    <section class="hero is-small has-background-info-dark">
+      <div class="hero-body container has-text-centered has-background-info-dark">
+        <p class="title">FilmReal Engine</p> 
       </div>
+        <div class="field has-addons">
+          <p class="control">
+
+          </p>
+        </div>
     </section>
     <section class="section">
       <div class="columns">
@@ -33,7 +37,7 @@
           >
             Genre
           </h1>
-            <div class=" columns is-centered select is-danger is-rounded">
+            <div class="select is-danger is-rounded">
                 <select id="genreDropdown" class="genre-content">
                     <option>---Choose Genre---</option>
                     <option>Action</option>
@@ -45,16 +49,18 @@
                     <option>Romance</option>
                     <option>Thriller</option>
                 </select>
-                <button class="button is-hovered is-rounded" id="genreBtn">Search</button>
+               
+                
             </div> 
-        </div>
+            <button class="button is-hovered is-rounded is-paddedgenre-btn" id="genreBtn">Search</button>
+          </div>
         <div class="column">
           <h3
             class="is-size-1 title has-text-centered has-background-info-dark h3-img"
           >
             Movie Length
           </h3>
-          <!--- Should we call this Movie Time or Movie Run?-->
+
           <div class="select is-danger is-rounded">
           <select id="lengthdropdown" class="lengthbtn">
             <b> Select you movie length search using dropdown list </b>
@@ -64,7 +70,7 @@
             <option value="180">More than three hours</option>
           </select>
           </div>
-          <button class="button is-hovered is-rounded" id="lengthButton" >Search</button>
+          <button class="button is-hovered is-rounded is-paddedlength-btn" id="lengthButton" >Search</button>
         </div>
 
         <div class="column">
@@ -73,8 +79,8 @@
           >
             Year
           </h2>
-          <div class="select is-danger is-rounded is-right">
-            <select id="yearButton">
+          <div class="select is-danger is-rounded">
+            <select id="yearSelect">
               <option>Select dropdown</option>
               <option value="2000">2000</option>
               <option value="2001">2001</option>
@@ -99,7 +105,7 @@
               <option value="2020">2020</option>
             </select>
           </div>
-          <button type="button" class="button is-hovered is-rounded">Search</button>
+          <button class="button is-hovered is-rounded is-paddedyear-btn" id="yearButton">Search</button>
         </div>
       </div>
     </section>
@@ -116,15 +122,20 @@
         <div class="content column is-one-third" id="yearResults"></div>
         
       </div>
+        <div class="modal is-active is-clipped" id= "modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-link py-5 px-5">
+          <h4 class="title has-text-centered mb-6 has-text-black is-size-1">Contact the Team!</h4>
+          <button class="modal-close is-large" aria-label="close" id= "modalbtn"></button>
+        </div>
+      </div>  
     </section>
     <br></br>
     <footer class="footer has has-background-info-dark footer-img">
       <div
         class="
           content
-          has-text-centered has-background-info-dark has-text-white
-        "
-      >
+          has-text-centered has-background-info-dark has-text-white">
         <p>
           Created by Devon Kuhn, Morgan Moore, Michael Boyles and Sheri Foster
         </p>
@@ -134,6 +145,7 @@
     <script src="./assets/javascript.js"></script>
     <script src="./assets/morganscript.js"></script>
     <script src="./assets/MichaelJS.js"></script>
+    
   </body>
   
 </html>
