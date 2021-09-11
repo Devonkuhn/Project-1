@@ -32,6 +32,22 @@
     background-image: url("https://media.istockphoto.com/vectors/realistic-3d-film-reel-stripe-cinema-on-blue-background-with-place-vector-id1173511424?b=1&k=20&m=1173511424&s=170667a&w=0&h=A0r-fG7winGn1hQAhMXlgq41_Wg7j-Q00Uz1yDt26qQ=");
 }
 
+#genreDropdown, #lengthdropdown, #yearSelect, #genreBtn, #lengthButton, #yearButton {
+    background: #011837;
+    color: white;
+}
+
+.btnMargin1 {
+    margin-left: 70px;
+}
+
+.btnMargin2 {
+    margin-left: 55px;
+}
+.btnMargin3 {
+    margin-left: 70px;
+}
+
 .ul {
     margin-bottom: 40px;
     margin-top: 20px;;
@@ -66,6 +82,24 @@
     margin-left: 10px;
 }
 
+.box-element {
+    padding:  0 35px;
+    margin-left: 70px;
+    margin-top: 15px;
+    height: 30px;
+    font-size: 25px;
+    color: white;
+    width: 60%;
+}
+
+.box-element2 {
+    margin-left: 700px;
+}
+
+.fontSize {
+    font-size: 70px;
+}
+
 .footer-img {
     height: 150px;
     background-size: 100%;
@@ -95,6 +129,7 @@ body {
 .text-shadow {
     text-shadow: 3px 3px gray;
 }
+
 .h1-img,
 .h2-img,
 .h3-img {
