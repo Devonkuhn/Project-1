@@ -19,6 +19,8 @@
     line-height: 100%;
     width: 100%;
     background-image: url("img.JPG");
+    border-radius: 25px;
+    text-shadow: 2px 2px gray;
 }
 
 .footer-img {
@@ -29,5 +31,24 @@
     width: 100%;
     background-image: url("./footerimg.JPG");
     display: block;
-    
+}
+
+strong.bold {
+    color: white;
+}
+
+.title {
+    margin-top: 5px;
+}
+
+.body-color {
+    background-color: white;
+}
+
+body {
+    font-family: 'Courgette', 'Amatic SC', 'Dancing Script';
+  }
+
+.text-shadow {
+    text-shadow: 3px 3px gray;
 }
