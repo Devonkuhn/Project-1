@@ -1,15 +1,30 @@
-
 .header {
-    height: 150px;
+  height: 150px;
+  background-size: 100%;
+  background-position: center;
+  line-height: 100%;
+
+  width: 100%;
+  background-image: url("https://image.shutterstock.com/image-vector/different-film-strip-frame-clapperboard-260nw-1297027963.jpg");
+}
+
+.bg-color {
+  background-color: #011837;
+}
+
+.h1-img, .h2-img, .h3-img {
+    height: 60px;
     background-size: 100%;
     background-position: center;
     line-height: 100%;
-    width: 99.9%;
-    background-image: url("https://image.shutterstock.com/image-vector/different-film-strip-frame-clapperboard-260nw-1297027963.jpg");
+    width: 100%;
+    background-image: url("img.JPG");
+    border-radius: 25px;
+    text-shadow: 2px 2px gray;
 }
 
-.h1-image {
-    height: 60px;
+.footer-img {
+    height: 150px;
     background-size: 100%;
     background-position: center;
     line-height: 100%;
@@ -49,4 +64,62 @@
 
 #yearSelect {
     margin-left: 10px;
+}
+
+.footer-img {
+    height: 150px;
+    background-size: 100%;
+    background-position: center;
+    line-height: 100%;
+    width: 100%;
+    background-image: url("./footerimg.JPG");
+    display: block;
+  }
+
+strong.bold {
+    color: white;
+}
+
+.title {
+    margin-top: 5px;
+}
+
+.body-color {
+    background-color: white;
+}
+
+body {
+    font-family: 'Courgette', 'Amatic SC', 'Dancing Script';
+  }
+
+.text-shadow {
+    text-shadow: 3px 3px gray;
+}
+.h1-img,
+.h2-img,
+.h3-img {
+  height: 60px;
+  background-size: 100%;
+  background-position: center;
+  line-height: 100%;
+  width: 100%;
+  background-image: url("img.JPG");
+}
+
+.footer-img {
+  height: 150px;
+  background-size: 100%;
+  background-position: center;
+  line-height: 100%;
+  width: 100%;
+  background-image: url("./footerimg.JPG");
+  display: block;
+}
+
+strong.bold {
+  color: white;
+}
+
+body {
+  width: 100%;
 }
