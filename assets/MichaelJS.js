@@ -46,9 +46,9 @@ function displayLengthSearch(data, historic) {
   var html = "";
 
   if (historic === true) {
-    html += "<strong><em>Previous Results</em></strong><br>";
+    html += '<strong class="bold"><em>Previous Results</em></strong><br>';
   } else if (historic == false) {
-    html += "<strong><em>Search Results</em></strong><br>";
+    html += '<strong class="bold"><em>Search Results</em></strong><br>';
   }
 
   for (let i = 0; i < data.results.length && i < 15; i++) {

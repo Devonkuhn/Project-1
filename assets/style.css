@@ -1,33 +1,42 @@
 .header {
-    height: 150px;
-    background-size: 100%;
-    background-position: center;
-    line-height: 100%;
+  height: 150px;
+  background-size: 100%;
+  background-position: center;
+  line-height: 100%;
 
-    width: 100%;
-    background-image: url("https://image.shutterstock.com/image-vector/different-film-strip-frame-clapperboard-260nw-1297027963.jpg");
+  width: 100%;
+  background-image: url("https://image.shutterstock.com/image-vector/different-film-strip-frame-clapperboard-260nw-1297027963.jpg");
 }
 
 .bg-color {
-    background-color: #011837;
+  background-color: #011837;
 }
 
-.h1-img, .h2-img, .h3-img {
-    height: 60px;
-    background-size: 100%;
-    background-position: center;
-    line-height: 100%;
-    width: 100%;
-    background-image: url("img.JPG");
+.h1-img,
+.h2-img,
+.h3-img {
+  height: 60px;
+  background-size: 100%;
+  background-position: center;
+  line-height: 100%;
+  width: 100%;
+  background-image: url("img.JPG");
 }
 
 .footer-img {
-    height: 150px;
-    background-size: 100%;
-    background-position: center;
-    line-height: 100%;
-    width: 100%;
-    background-image: url("./footerimg.JPG");
-    display: block;
-    
+  height: 150px;
+  background-size: 100%;
+  background-position: center;
+  line-height: 100%;
+  width: 100%;
+  background-image: url("./footerimg.JPG");
+  display: block;
+}
+
+strong.bold {
+  color: white;
+}
+
+body {
+  width: 100%;
 }
