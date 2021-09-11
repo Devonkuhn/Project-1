@@ -1,17 +1,18 @@
 .header {
-    height: 150px;
-    background-size: 100%;
-    background-position: center;
-    line-height: 100%;
+  height: 150px;
+  background-size: 100%;
+  background-position: center;
+  line-height: 100%;
 
-    width: 100%;
-    background-image: url("https://image.shutterstock.com/image-vector/different-film-strip-frame-clapperboard-260nw-1297027963.jpg");
+  width: 100%;
+  background-image: url("https://image.shutterstock.com/image-vector/different-film-strip-frame-clapperboard-260nw-1297027963.jpg");
 }
 
 .bg-color {
-    background-color: #011837;
+  background-color: #011837;
 }
 
+<<<<<<< HEAD
 .h1-img, .h2-img, .h3-img {
     height: 60px;
     background-size: 100%;
@@ -52,3 +53,33 @@ body {
 .text-shadow {
     text-shadow: 3px 3px gray;
 }
+=======
+.h1-img,
+.h2-img,
+.h3-img {
+  height: 60px;
+  background-size: 100%;
+  background-position: center;
+  line-height: 100%;
+  width: 100%;
+  background-image: url("img.JPG");
+}
+
+.footer-img {
+  height: 150px;
+  background-size: 100%;
+  background-position: center;
+  line-height: 100%;
+  width: 100%;
+  background-image: url("./footerimg.JPG");
+  display: block;
+}
+
+strong.bold {
+  color: white;
+}
+
+body {
+  width: 100%;
+}
+>>>>>>> f32b55ee08ec620f8bd15dbe5623a3680234424d
